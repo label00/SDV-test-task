@@ -1,0 +1,42 @@
+@import "variables";
+
+.card {
+  &__title {
+    margin: 0 0 11px 0;
+
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 39px;
+    letter-spacing: -0.05em;
+    text-align: center;
+    color: transparent;
+
+    background: linear-gradient(145.08deg, #E61726 12.35%, #D4208C 83.63%);
+    -webkit-background-clip: text;
+
+    @media (min-width: $lg) {
+      font-size: 77px;
+      line-height: 85px;
+    }
+  }
+
+  &__description {
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: -0.05em;
+    text-align: center;
+    width: 177px;
+
+    @media (min-width: $sm) {
+      width: auto;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 28px;
+      line-height: 38px;
+    }
+  }
+}

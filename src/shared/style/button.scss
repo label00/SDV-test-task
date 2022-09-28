@@ -1,0 +1,49 @@
+@import "variables";
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  background: linear-gradient(238.08deg, #D4208C 0.42%, #E61726 82.5%);
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+  width: 100%;
+
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+
+  @media (min-width: $lg) {
+    padding: 25px 136px;
+    font-size: 23px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .3;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus, &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+
+  &--submit {
+    letter-spacing: 0.1em;
+
+    @media (min-width: $lg) {
+      letter-spacing: 0.2em;
+    }
+  }
+}

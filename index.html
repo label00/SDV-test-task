@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link href="/vite.svg" rel="icon" type="image/svg+xml"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>CDV Sign Up</title>
+  <link rel="stylesheet" href="src/style.scss"  />
+</head>
+<body>
+<div class="layout">
+  <div class="layout__image">
+    <picture>
+      <source media="(max-width: 1023px)" srcset="/people-m.png"/>
+      <source media="(min-width: 1024px)" srcset="/people.png"/>
+      <img alt="People" src="/people.png"/>
+    </picture>
+  </div>
+  <div class="layout__sign-up">
+    <div class="sign-up">
+      <h1 class="sign-up__title">How to <br> Participate</h1>
+      <div class="sign-up__list">
+        <ul class="list" role="list">
+          <li class="list__item">
+            <span class="list__marker">1.</span>
+            Subscribe to our News
+          </li>
+          <li class="list__item">
+            <span class="list__marker">2.</span>
+            <button class="button" id="signUpButton" type="button">Sign up</button>
+          </li>
+          <li class="list__item">
+            <span class="list__marker">3.</span>
+            Check your email inbox
+          </li>
+          <li class="list__item">
+            <span class="list__marker">4.</span>
+            Wait till September 22
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+<dialog class="dialog" id="signUpDialog">
+  <div class="dialog__header">
+    <button class="dialog__close" id="signUpClose">
+      <img alt="close" src="/close.svg">
+    </button>
+  </div>
+  <div class="dialog__body">
+    <div class="dialog__content" id="dialogContent">
+      <h2 class="dialog__title">To register, enter the mail to which our news is sent and set your password</h2>
+      <form class="dialog__form" id="signUpForm">
+        <div class="dialog__fields">
+          <label class="field">
+            <input
+              autocomplete="off"
+              class="field__input"
+              name="email"
+              placeholder="Example@email.com"
+              required
+              type="email"
+            />
+            <div class="field__error"></div>
+          </label>
+
+          <label class="field">
+            <input
+              autocomplete="off"
+              class="field__input"
+              name="password"
+              placeholder="Password"
+              required
+              type="password"
+            />
+            <div class="field__error"></div>
+          </label>
+        </div>
+
+        <div class="dialog__submit">
+          <button class="button button--submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="dialog dialog--card" id="thankYouDialog">
+  <div class="dialog__header">
+    <button class="dialog__close" id="thankYouClose">
+      <img alt="close" src="/close.svg">
+    </button>
+  </div>
+  <div class="dialog__body">
+    <div class="card">
+      <h2 class="card__title">Thank You</h2>
+      <span class="card__description">To complete registration, please check your e-mail</span>
+    </div>
+  </div>
+</dialog>
+<script src="/src/auth.ts" type="module"></script>
+<script src="/src/main.ts" type="module"></script>
+</body>
+</html>

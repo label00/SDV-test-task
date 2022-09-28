@@ -1,0 +1,51 @@
+@import "variables";
+
+.list {
+  list-style: none inside;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $md) {
+    min-width: 340px;
+  }
+
+  @media (min-width: $lg) {
+    min-width: 480px;
+  }
+
+  > * + * {
+    margin-top: 18px;
+  }
+
+  &__item {
+    color: $black;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -0.05em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media (min-width: $lg) {
+      gap: 20px;
+      font-size: 38px;
+      line-height: 76px;
+    }
+  }
+
+  &__marker {
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: -0.05em;
+    background-image: linear-gradient(145.08deg, #E61726 12.35%, #D4208C 83.63%);
+    color: transparent;
+    -webkit-background-clip: text;
+
+    @media (min-width: $lg) {
+      font-size: 55px;
+      font-weight: 800;
+      line-height: 76px;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import "variables";
+
+.dialog {
+  background: #FFFFFF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  border: none;
+  padding: 72px 15px;
+  width: 100%;
+
+  position: relative;
+
+  @media (min-width: $sm) {
+    padding: 120px 30px;
+  }
+
+  @media (min-width: $lg) {
+    padding: 150px 45px;
+    max-width: 1270px;
+  }
+
+  &::backdrop {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(7.5px);
+  }
+
+  &__header {
+    position: absolute;
+    top: 20px;
+    right: 8px;
+
+    @media (min-width: $lg) {
+      top: 45px;
+      right: 45px;
+    }
+  }
+
+  &__content {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    display: block;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  &__title {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    margin: 0 0 15px 0;
+
+    @media (min-width: $lg) {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__fields {
+    margin-bottom: 15px;
+
+    > * + * {
+      margin-top: 15px;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: center;
+
+    .button {
+      max-width: 166px;
+
+      @media (min-width: $lg) {
+        max-width: 387px;
+      }
+    }
+  }
+
+  &--card {
+    padding: 175px 26px;
+  }
+}

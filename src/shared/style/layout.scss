@@ -1,0 +1,40 @@
+@import "variables";
+
+.layout {
+  padding: 24px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $md) {
+    flex-direction: row;
+    height: 100%;
+  }
+
+  @media (min-width: $lg) {
+    padding: 120px 90px;
+  }
+
+  &__image {
+    max-width: 320px;
+
+    @media (min-width: $md) {
+      max-width: initial;
+      margin-right: 20px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__sign-up {
+    width: 100%;
+
+    @media (min-width: $md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
